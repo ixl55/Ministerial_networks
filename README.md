@@ -8,7 +8,7 @@
 
 Ready to test your skills? Access the live environment here:
 
-[**➔ Launch CyberExam Dashboard**](https://ixl55.github.io/network_qize/)
+[**➔ Launch CyberExam Dashboard**](https://ixl55.github.io/Ministerial_networks/)
 
 ---
 
