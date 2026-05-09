@@ -671,7 +671,7 @@
                             <li>
                                 <span class="num">٢</span>
                                 <span>
-                                    يتضمن الاختبار أكثر من <strong style="color:var(--neon-blue)">٤٠٠ سؤال</strong>
+                                    يتضمن الاختبار أكثر من <strong style="color:var(--neon-blue)">٥٤٠ سؤال</strong>
                                     من نوع الاختيار من متعدد.
                                 </span>
                             </li>
@@ -730,7 +730,6 @@
                         </div>
                         <div class="college-chip" id="dispCollege"></div>
                     </div>
-
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progFill"></div>
@@ -772,7 +771,6 @@
                             <div class="val" style="color:var(--danger)" id="resIncorrect">0</div>
                             <div class="lbl">Incorrect ✗</div>
                         </div>
-
                     </div>
                     <div style="margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
                         <button class="btn btn-primary" id="retryBtn">↺ Retry Exam</button>
@@ -791,7 +789,7 @@
         <script>
             // ─── CONFIG ──────────────────────────────────────────────────────────────────
             const QUESTIONS_PER_PAGE = 5;
-
+            const SECONDS_PER_Q = 60;
 
             // ─── QUESTIONS ───────────────────────────────────────────────────────────────
             const rawQuestions = [{
@@ -2398,6 +2396,596 @@
                 q: "What is a key difference between AH and ESP regarding authentication?",
                 opts: ["AH includes parts of IP header in authentication, ESP does not", "AH encrypts data while ESP does not", "ESP includes IP header in authentication, AH does not", "Both include full IP header"],
                 a: "AH includes parts of IP header in authentication, ESP does not"
+            }, // ─── Added from "New Questions.txt" ─────────────────────────────────────────
+            {
+                q: "A network-layer security service is replay-attack prevention, meaning that receiver could detect ___ that an attacker might insert.",
+                opts: ["any duplicate datagrams", "all datagrams", "datagram at time", "any datagram"],
+                a: "any duplicate datagrams"
+            }, {
+                q: "A network-layer security protocol could potentially provide security services such as ___.",
+                opts: ["confidentiality", "source authentication", "data integrity", "all of above"],
+                a: "all of above"
+            }, {
+                q: "Before sending IPsec datagrams from source entity to destination entity, the source and destination entities ___.",
+                opts: ["create physical connection", "create logical connection", "have connectionless", "create logical and physical connection"],
+                a: "create logical connection"
+            }, {
+                q: "Security association (SA) is a simplex ___ from source to destination.",
+                opts: ["directional logical connection", "directional physical connection", "unidirectional logical connection", "unidirectional physical connection"],
+                a: "unidirectional logical connection"
+            }, {
+                q: "IPsec operates in ___.",
+                opts: ["one mode", "one of two different modes", "three modes", "multi-modes"],
+                a: "one of two different modes"
+            }, {
+                q: "The ___ can provide several security services for packets at the network layer.",
+                opts: ["AH protocol", "ESP protocol", "AH and ESP protocols", "public protocol"],
+                a: "AH and ESP protocols"
+            }, // ─── Added from "New Questions.txt" ─────────────────────────────────────────
+            {
+                q: "Which statement best reflects the lecture's distinction between data and information?",
+                opts: ["Information is always raw and unprocessed", "Data are raw facts, while information is processed data useful for decisions", "Data exist only in images", "Information is always numeric", "There is no meaningful difference"],
+                a: "Data are raw facts, while information is processed data useful for decisions"
+            }, {
+                q: "If a multimedia stream reaches the correct destination without corruption but arrives too late for real-time use, which characteristic has mainly failed?",
+                opts: ["Delivery", "Accuracy", "Protocol", "Timeliness", "Representation"],
+                a: "Timeliness"
+            }, {
+                q: "In a data communication system, which component represents the actual content being transmitted from sender to receiver?",
+                opts: ["Message", "Protocol", "Medium", "Interface", "Address"],
+                a: "Message"
+            }, {
+                q: "Which option best describes the role of a protocol in data communication?",
+                opts: ["It physically connects all devices", "It replaces the transmission medium", "It identifies only the receiver", "It stores information permanently", "It defines agreed rules for communication"],
+                a: "It defines agreed rules for communication"
+            }, {
+                q: "Which of the following is most directly associated with variation in packet arrival time?",
+                opts: ["Accuracy", "Delivery", "Jitter", "Timeliness", "Routing"],
+                a: "Jitter"
+            }, {
+                q: "Which statement about physical topology is correct?",
+                opts: ["It describes how devices are physically connected", "It describes only the speed of the link", "It is identical to logical topology in all cases", "It defines application services", "It replaces protocols"],
+                a: "It describes how devices are physically connected"
+            }, {
+                q: "Which topology is most associated with a central hub or switch that simplifies management and troubleshooting?",
+                opts: ["Ring", "Bus", "Star", "Mesh", "Tree"],
+                a: "Star"
+            }, {
+                q: "Which topology is generally considered simple and low-cost, but suffers if the main backbone fails?",
+                opts: ["Star", "Bus", "Mesh", "Tree", "Hybrid"],
+                a: "Bus"
+            }, {
+                q: "Which topology connects each device directly to every other device, making it highly fault tolerant but expensive?",
+                opts: ["Bus", "Star", "Ring", "Mesh", "Tree"],
+                a: "Mesh"
+            }, {
+                q: "Which topology is described as combining two or more topologies to meet specific requirements?",
+                opts: ["Bus", "Star", "Ring", "Tree", "Hybrid"],
+                a: "Hybrid"
+            }, {
+                q: "Which topology is most suitable for scalable hierarchical growth by connecting multiple star networks to a backbone?",
+                opts: ["Ring", "Bus", "Tree", "Mesh", "Hybrid"],
+                a: "Tree"
+            }, {
+                q: "Which OSI layer is responsible for the movement of individual bits from one hop to the next?",
+                opts: ["Physical", "Data Link", "Network", "Transport", "Session"],
+                a: "Physical"
+            }, {
+                q: "Which OSI layer performs framing, error detection, and flow control for node-to-node delivery?",
+                opts: ["Physical", "Transport", "Session", "Presentation", "Data Link"],
+                a: "Data Link"
+            }, {
+                q: "Which OSI layer is mainly responsible for logical addressing and choosing the best path through the network?",
+                opts: ["Data Link", "Network", "Physical", "Session", "Presentation"],
+                a: "Network"
+            }, {
+                q: "Which OSI layer provides process-to-process delivery and may support connection-oriented or connectionless communication?",
+                opts: ["Network", "Data Link", "Session", "Transport", "Physical"],
+                a: "Transport"
+            }, {
+                q: "Which OSI layer is responsible for dialog control and synchronization between applications?",
+                opts: ["Application", "Presentation", "Network", "Transport", "Session"],
+                a: "Session"
+            }, {
+                q: "Which OSI layer is mainly concerned with translation, compression, and encryption?",
+                opts: ["Application", "Presentation", "Session", "Physical", "Network"],
+                a: "Presentation"
+            }, {
+                q: "In the OSI model, which layer directly provides services to the end user through software such as e-mail and file transfer?",
+                opts: ["Session", "Network", "Application", "Physical", "Data Link"],
+                a: "Application"
+            }, {
+                q: "According to the lecture, why are session and presentation not treated as separate layers in TCP/IP?",
+                opts: ["Because TCP/IP does not support security", "Because routers handle them entirely", "Because they exist only in OSI theory", "Because their functions can be handled by transport protocols or applications when needed", "Because physical addressing replaced them"],
+                a: "Because their functions can be handled by transport protocols or applications when needed"
+            }, {
+                q: "Which statement best matches the lecture's explanation of TCP/IP as a hierarchical protocol?",
+                opts: ["Each upper layer is supported by one or more lower layers", "All layers work independently without interaction", "The application layer supports the physical layer", "TCP/IP has no internal structure", "Only one protocol exists at each layer"],
+                a: "Each upper layer is supported by one or more lower layers"
+            }, {
+                q: "Which form of data representation listed in the lecture is described as continuous rather than discrete?",
+                opts: ["Text", "Number", "Audio", "Image", "Symbol"],
+                a: "Audio"
+            }, {
+                q: "Which topology is more vulnerable to increased collisions and performance degradation as more devices share the same communication line?",
+                opts: ["Bus", "Mesh", "Tree", "Star", "Hybrid"],
+                a: "Bus"
+            }, {
+                q: "Which statement about ring topology is most accurate according to the lecture?",
+                opts: ["It always uses a central switch", "It is naturally immune to any failure", "It is the cheapest of all topologies", "It cannot support predictable traffic", "A single failure may disrupt the network unless redundancy exists"],
+                a: "A single failure may disrupt the network unless redundancy exists"
+            }, {
+                q: "Why is mesh topology considered highly reliable?",
+                opts: ["It depends on one backbone only", "It provides multiple possible paths for transmission", "It uses the least cabling", "It eliminates addressing", "It avoids all protocols"],
+                a: "It provides multiple possible paths for transmission"
+            }, {
+                q: "Which topology is especially common in offices, data centers, and home networks due to centralized management?",
+                opts: ["Ring", "Bus", "Mesh", "Star", "Tree"],
+                a: "Star"
+            }, {
+                q: "Which OSI layer is responsible for moving frames from one hop to the next?",
+                opts: ["Physical", "Data Link", "Session", "Network", "Application"],
+                a: "Data Link"
+            }, {
+                q: "Which OSI layer is responsible for the delivery of individual packets from the source host to the destination host?",
+                opts: ["Network", "Physical", "Presentation", "Data Link", "Session"],
+                a: "Network"
+            }, {
+                q: "Which OSI layer handles connection management and ensures that data units arrive in sequence?",
+                opts: ["Application", "Physical", "Transport", "Session", "Network"],
+                a: "Transport"
+            }, {
+                q: "Which OSI layer may provide check-pointing so that communication can resume from the last checkpoint after a failure?",
+                opts: ["Presentation", "Transport", "Data Link", "Session", "Network"],
+                a: "Session"
+            }, {
+                q: "Which OSI layer includes examples such as file transfer, remote login, and electronic mail?",
+                opts: ["Network", "Physical", "Session", "Transport", "Application"],
+                a: "Application"
+            }, {
+                q: "Which statement best captures the main goal of network security in the lecture?",
+                opts: ["Increasing link speed", "Preventing network expansion", "Replacing protocols", "Ensuring confidentiality, integrity, and availability", "Limiting hardware diversity"],
+                a: "Ensuring confidentiality, integrity, and availability"
+            }, {
+                q: "Which item is explicitly listed as a key component of network security?",
+                opts: ["Firewall", "Bus repeater", "Voltage regulator", "Modem firmware only", "Clock synchronization"],
+                a: "Firewall"
+            }, {
+                q: "Which security mechanism encrypts transmissions over public networks to support secure remote access?",
+                opts: ["Antivirus", "Firewall", "VPN", "Segmentation", "Access card"],
+                a: "VPN"
+            }, {
+                q: "Which mechanism ensures that only authorized users can access network resources?",
+                opts: ["Encryption", "Access control", "Routing", "Framing", "Broadcasting"],
+                a: "Access control"
+            }, {
+                q: "Which practice is listed among the fundamental basics of network security?",
+                opts: ["Ignoring updates on stable systems", "Removing all access restrictions", "Creating strong passwords", "Sharing accounts to reduce cost", "Disabling encryption for speed"],
+                a: "Creating strong passwords"
+            }, {
+                q: "The lecture explains that network threats may aim at spying, disruption, or financial gain. This means threats can:",
+                opts: ["Affect only cable quality", "Have different objectives and impacts", "Be removed by topology alone", "Target only wireless systems", "Be eliminated by addressing"],
+                a: "Have different objectives and impacts"
+            }, {
+                q: "Which level of network security focuses on restricting physical access to hardware and facilities?",
+                opts: ["Technical network security", "Administrative network security", "Logical network security", "Physical network security", "Protocol network security"],
+                a: "Physical network security"
+            }, {
+                q: "Which level of network security mainly involves permissions, policies, and authorization procedures?",
+                opts: ["Physical", "Technical", "Administrative", "Optical", "Distributed"],
+                a: "Administrative"
+            }, {
+                q: "Which type of security focuses on protecting software applications from vulnerabilities through secure coding and patching?",
+                opts: ["Access control", "Application security", "Wireless security", "Web routing", "Network topology security"],
+                a: "Application security"
+            }, {
+                q: "Which type of security includes protection against SQL injection and XSS?",
+                opts: ["Wireless security", "Workload security", "Access control", "Web security", "Physical security"],
+                a: "Web security"
+            }, {
+                q: "Which statement best explains why the lecture gives both test results of all students and your own pass/fail result as an example?",
+                opts: ["To show that protocols and data are identical", "To distinguish raw data from processed information", "To prove that information must be numeric", "To show that storage is more important than meaning", "To define network topology"],
+                a: "To distinguish raw data from processed information"
+            }, {
+                q: "If data are delivered to the wrong destination even though transmission quality is excellent, which communication characteristic has failed?",
+                opts: ["Accuracy", "Jitter", "Medium", "Delivery", "Timing"],
+                a: "Delivery"
+            }, {
+                q: "Which component of a data communication system is best defined as the path by which the message travels?",
+                opts: ["Message", "Sender", "Receiver", "Protocol", "Transmission medium"],
+                a: "Transmission medium"
+            }, {
+                q: "Why does the lecture compare communication without protocol to two people speaking different languages?",
+                opts: ["To show that hardware is unnecessary", "To prove that data must be encrypted", "To show that accuracy depends only on timing", "To explain that communication requires shared rules", "To define physical topology"],
+                a: "To explain that communication requires shared rules"
+            }, {
+                q: "Which topology was noted as less popular today because of vulnerability to network failures, despite earlier use in LANs?",
+                opts: ["Bus", "Star", "Ring", "Mesh", "Hybrid"],
+                a: "Ring"
+            }, {
+                q: "Which OSI layer covers voltage levels, physical connectors, and transmission distances?",
+                opts: ["Physical", "Network", "Session", "Transport", "Presentation"],
+                a: "Physical"
+            }, {
+                q: "Which OSI layer facilitates internetworking and may fragment packets to fit different media?",
+                opts: ["Data Link", "Physical", "Network", "Session", "Application"],
+                a: "Network"
+            }, {
+                q: "Which OSI layer is described as providing a reliable mechanism for exchange of data between two processes in different computers?",
+                opts: ["Application", "Transport", "Data Link", "Physical", "Session"],
+                a: "Transport"
+            }, {
+                q: "Which OSI layer may handle log-on or password validation during the establishment of a logical connection?",
+                opts: ["Data Link", "Network", "Transport", "Session", "Physical"],
+                a: "Session"
+            }, {
+                q: "Which OSI layer is the highest level of the OSI model?",
+                opts: ["Data Link", "Transport", "Session", "Presentation", "Application"],
+                a: "Application"
+            }, {
+                q: "Which statement best describes the CIA triad as presented in the lecture?",
+                opts: ["It refers to compression, integration, and access", "It refers to confidentiality, integrity, and availability", "It refers to coding, identification, and authorization", "It refers to control, inspection, and auditing", "It refers to communication, interoperability, and authentication"],
+                a: "It refers to confidentiality, integrity, and availability"
+            }, {
+                q: "Which measure is described as converting data into unreadable code accessible only to authorized users with a decryption key?",
+                opts: ["Access control", "Segmentation", "Firewalling", "Authentication", "Encryption"],
+                a: "Encryption"
+            }, {
+                q: "Which security component helps detect, quarantine, and remove malicious software?",
+                opts: ["Antivirus and anti-malware software", "Topology mapping", "Jitter control", "Session synchronization", "Frame relay"],
+                a: "Antivirus and anti-malware software"
+            }, {
+                q: "Which statement best explains the weakness of ap1.0?",
+                opts: ["It uses complex encryption that Bob cannot verify", "It depends on a nonce that is too short", "It provides no way for Bob to know that the claimed sender is really Alice", "It reveals Bob's password", "It operates at the physical layer only"],
+                a: "It provides no way for Bob to know that the claimed sender is really Alice"
+            }, {
+                q: "Why is ap2.0 still insecure even if Alice has a well-known IP address?",
+                opts: ["Because IP addressing works only inside LANs", "Because passwords are stronger than identity", "Because source IP addresses can be spoofed", "Because routing eliminates authentication", "Because receivers cannot read addresses"],
+                a: "Because source IP addresses can be spoofed"
+            }, {
+                q: "What is the main weakness of ap3.0?",
+                opts: ["It uses too many keys", "It hides the password too well", "It depends on optical transmission", "It allows the password to be observed if communication is eavesdropped", "It lacks sender identification entirely"],
+                a: "It allows the password to be observed if communication is eavesdropped"
+            }, {
+                q: "Why does ap3.1 still fail even though the password is encrypted?",
+                opts: ["The message is too short for authentication", "An attacker can replay the encrypted password", "Encryption is forbidden in authentication", "Bob cannot decrypt any ciphertext", "Alice's identity is removed from the message"],
+                a: "An attacker can replay the encrypted password"
+            }, {
+                q: "In ap4.0, what does the nonce primarily help Bob verify?",
+                opts: ["That Alice is live and responding now, not replaying an old message", "That physical topology is correct", "That the transmission medium is wired", "That the password is stored locally", "That the network layer is bypassed"],
+                a: "That Alice is live and responding now, not replaying an old message"
+            }, {
+                q: "According to the lecture, why is network-layer security often described as providing blanket coverage?",
+                opts: ["Because it protects only e-mail", "Because it is limited to TCP segments", "Because it secures only management traffic", "Because it can hide all kinds of higher-layer traffic between two entities", "Because it replaces every other protocol in the Internet"],
+                a: "Because it can hide all kinds of higher-layer traffic between two entities"
+            }, {
+                q: "Why do institutions often create VPNs instead of deploying a fully separate private physical network?",
+                opts: ["VPNs are generally less costly because they use the public Internet with encryption", "VPNs remove the need for routers", "VPNs require no confidentiality mechanisms", "VPNs eliminate addressing", "VPNs are used only inside one office"],
+                a: "VPNs are generally less costly because they use the public Internet with encryption"
+            }, {
+                q: "A communication system delivers a live video stream to the intended receiver with no bit corruption, but the viewer experiences irregular motion because packets do not arrive at steady intervals. Which characteristic is being violated most directly?",
+                opts: ["Delivery", "Jitter", "Accuracy", "Timeliness", "Protocol"],
+                a: "Jitter"
+            }, {
+                q: "Which situation best illustrates the distinction between data and information?",
+                opts: ["A firewall blocking external traffic", "A router choosing the shortest path", "A switch forwarding a frame to the next hop", "A list of all exam scores being processed into a student's pass/fail result", "A protocol converting analog signals to digital form"],
+                a: "A list of all exam scores being processed into a student's pass/fail result"
+            }, {
+                q: "If two devices are connected by an ideal transmission medium but do not share rules about message format, timing, and interpretation, which component is missing in the most fundamental sense?",
+                opts: ["Protocol", "Sender", "Receiver", "Message", "Topology"],
+                a: "Protocol"
+            }, {
+                q: "A network designer wants the simplest and cheapest topology for a very small office, while knowingly accepting that failure of a single shared cable can stop the whole network. Which topology best fits that trade-off?",
+                opts: ["Mesh", "Star", "Tree", "Ring", "Bus"],
+                a: "Bus"
+            }, {
+                q: "Which topology most strongly sacrifices cost and simplicity in order to maximize redundancy through multiple direct paths?",
+                opts: ["Ring", "Star", "Mesh", "Bus", "Tree"],
+                a: "Mesh"
+            }, {
+                q: "Why is star topology often easier to troubleshoot than bus or ring topology?",
+                opts: ["Because failure is often isolated to an individual connection or the central device", "Because all devices communicate without hardware", "Because it removes the need for protocols", "Because packets never collide in any circumstance", "Because it uses less cabling than bus topology"],
+                a: "Because failure is often isolated to an individual connection or the central device"
+            }, {
+                q: "Which OSI layer is the first one in which delivery is no longer merely hop-to-hop, but becomes concerned with getting packets from the source host to the destination host?",
+                opts: ["Physical", "Data Link", "Network", "Transport", "Session"],
+                a: "Network"
+            }, {
+                q: "Which OSI layer would be the most appropriate place to explain why a received message is complete, in order, and not duplicated between two communicating processes?",
+                opts: ["Data Link", "Transport", "Network", "Presentation", "Physical"],
+                a: "Transport"
+            }, {
+                q: "Why is TCP/IP able to function without separate session and presentation layers?",
+                opts: ["Because TCP/IP ignores dialogue and formatting entirely", "Because routers implement them physically", "Because only OSI supports encryption", "Because these functions can be absorbed by transport protocols or application software when needed", "Because TCP/IP uses no hierarchy"],
+                a: "Because these functions can be absorbed by transport protocols or application software when needed"
+            }, {
+                q: "Which statement best explains why network security is not limited to software tools alone?",
+                opts: ["Because it depends only on encryption algorithms", "Because hardware security makes policy unnecessary", "Because availability is unrelated to security", "Because access control alone is sufficient", "Because it combines technologies, policies, and procedures to preserve confidentiality, integrity, and availability"],
+                a: "Because it combines technologies, policies, and procedures to preserve confidentiality, integrity, and availability"
+            }, {
+                q: "Suppose data are delivered to the correct user but arrive with altered bits because of transmission errors. Which core characteristic has failed?",
+                opts: ["Accuracy", "Jitter", "Delivery", "Timeliness", "Addressing"],
+                a: "Accuracy"
+            }, {
+                q: "Which statement captures the distinction between physical topology and logical topology most precisely?",
+                opts: ["Physical topology shows actual device interconnection, while logical topology concerns data flow", "Physical topology defines data meaning, while logical topology defines cables", "Physical topology is used only in LANs, logical topology only in WANs", "Logical topology is part of the transport layer", "There is no practical difference"],
+                a: "Physical topology shows actual device interconnection, while logical topology concerns data flow"
+            }, {
+                q: "A topology is described as hierarchical, scalable, and formed by connecting multiple star networks to a backbone. Which topology is this?",
+                opts: ["Bus", "Mesh", "Hybrid", "Ring", "Tree"],
+                a: "Tree"
+            }, {
+                q: "Which OSI layer is most directly associated with voltage levels, physical connectors, timing of signal changes, and maximum transmission distance?",
+                opts: ["Data Link", "Physical", "Network", "Transport", "Application"],
+                a: "Physical"
+            }, {
+                q: "Which responsibility most clearly separates the data link layer from the physical layer?",
+                opts: ["Moving bits across the medium", "Defining connectors and signal levels", "Encrypting data", "Framing and reliable node-to-node transfer", "Providing application services"],
+                a: "Framing and reliable node-to-node transfer"
+            }, {
+                q: "Which layer is best identified by the phrase \"process-to-process delivery\"?",
+                opts: ["Network", "Transport", "Data Link", "Physical", "Session"],
+                a: "Transport"
+            }, {
+                q: "Check-pointing, dialogue control, and controlled establishment or termination of conversations between applications belong most naturally to which OSI layer?",
+                opts: ["Session", "Presentation", "Application", "Network", "Physical"],
+                a: "Session"
+            }, {
+                q: "If a layer compresses data before transmission and translates its format so the receiver can interpret it correctly, which layer is acting?",
+                opts: ["Data Link", "Session", "Presentation", "Network", "Transport"],
+                a: "Presentation"
+            }, {
+                q: "Which option best expresses the security purpose of network segmentation?",
+                opts: ["To increase the total number of user accounts", "To replace encryption with topology", "To eliminate the need for access control", "To isolate portions of the network so threats spread less easily", "To convert WANs into LANs"],
+                a: "To isolate portions of the network so threats spread less easily"
+            }, {
+                q: "Network threats may have different objectives such as spying, disruption, or financial gain. What follows logically from this?",
+                opts: ["One defense always defeats all attacks equally", "Security policy must account for multiple threat goals and vulnerabilities", "Only confidentiality matters", "Availability is unrelated to threats", "Physical security alone is sufficient"],
+                a: "Security policy must account for multiple threat goals and vulnerabilities"
+            }, {
+                q: "Why does protocol ap1.0 fail as an authentication method?",
+                opts: ["Because Alice encrypts the message incorrectly", "Because source addresses are always hidden", "Because Bob has no basis for believing the claimant is truly Alice", "Because replay protection is too strong", "Because it uses too many nonces"],
+                a: "Because Bob has no basis for believing the claimant is truly Alice"
+            }, {
+                q: "Protocol ap2.0 improves on ap1.0 by checking a known source IP address. Why is this still not trustworthy?",
+                opts: ["Because source IP addresses can be spoofed", "Because IP addresses are always encrypted", "Because routers ignore source addresses", "Because only MAC addresses matter across the Internet", "Because spoofing is impossible on modern systems"],
+                a: "Because source IP addresses can be spoofed"
+            }, {
+                q: "Why is protocol ap3.0 insecure even though passwords are widely used in real systems?",
+                opts: ["Because Bob cannot store passwords", "Because passwords work only at the physical layer", "Because Alice does not identify herself", "Because the protocol uses too many messages", "Because the password is transmitted in a form an eavesdropper may capture"],
+                a: "Because the password is transmitted in a form an eavesdropper may capture"
+            }, {
+                q: "What is the core weakness of ap3.1, where the password is encrypted before transmission?",
+                opts: ["Alice's identity disappears from the message", "The encrypted password can be replayed by an attacker", "Bob cannot decrypt the password", "The source address becomes invalid", "Encryption prevents authentication"],
+                a: "The encrypted password can be replayed by an attacker"
+            }, {
+                q: "In ap4.0, why is the nonce essential?",
+                opts: ["It replaces the secret key permanently", "It compresses the authentication traffic", "It identifies the physical layer", "It proves that Alice is responding live rather than replaying an old message", "It eliminates the need for any cryptography"],
+                a: "It proves that Alice is responding live rather than replaying an old message"
+            }, {
+                q: "Which statement best captures the difference between proving that a message once came from someone and authenticating a \"live\" party during current communication?",
+                opts: ["They are identical problems", "Live authentication must rely on current protocol exchange, not only past evidence", "Past messages are always stronger evidence", "Only biometric methods can solve the second problem", "Network protocols cannot address either problem"],
+                a: "Live authentication must rely on current protocol exchange, not only past evidence"
+            }, {
+                q: "Why is network-layer security described as offering \"blanket coverage\"?",
+                opts: ["Because it can secure many types of upper-layer traffic between two entities", "Because it protects only web traffic", "Because it replaces all other layers", "Because it works only for TCP", "Because it secures only management messages"],
+                a: "Because it can secure many types of upper-layer traffic between two entities"
+            }, {
+                q: "Which set of security services is explicitly associated with a network-layer security protocol such as IPsec?",
+                opts: ["Confidentiality only", "Compression, routing, and framing", "Source authentication, data integrity, confidentiality, and replay-attack prevention", "Dialogue control and synchronization", "Only password storage"],
+                a: "Source authentication, data integrity, confidentiality, and replay-attack prevention"
+            }, {
+                q: "Why might an institution prefer a VPN over building a completely separate private physical network?",
+                opts: ["Because VPNs do not use the Internet", "Because VPNs eliminate the need for routers and hosts", "Because VPNs remove the need for confidentiality", "Because VPNs usually reduce cost by using the public Internet with encryption", "Because private networks cannot support internal communication"],
+                a: "Because VPNs usually reduce cost by using the public Internet with encryption"
+            }, {
+                q: "In the VPN example, why can public Internet routers still forward the protected packet even though the payload is secured?",
+                opts: ["Because the datagram still carries a traditional IP header for routing", "Because routers decrypt all VPN traffic automatically", "Because the payload is never actually encrypted", "Because VPN traffic bypasses layer 3 entirely", "Because routing decisions are made only by hosts"],
+                a: "Because the datagram still carries a traditional IP header for routing"
+            }, {
+                q: "Which of the following most clearly belongs to technical network security rather than physical or administrative security?",
+                opts: ["Biometric door entry to the server room", "Permission-granting procedures for employees", "Encryption and intrusion detection systems protecting stored and transmitted data", "Visitor sign-in sheets", "Staff behavior guidelines only"],
+                a: "Encryption and intrusion detection systems protecting stored and transmitted data"
+            }, {
+                q: "Which of the following most clearly belongs to administrative network security?",
+                opts: ["Firewall packet filtering", "Encryption of sensitive transmissions", "Restricting physical entry to hardware facilities", "Policies governing permissions, authorization, and user behavior", "Voltage stabilization on the link"],
+                a: "Policies governing permissions, authorization, and user behavior"
+            }, {
+                q: "Which statement best explains why network security basics include both strong passwords and logging out from shared computers?",
+                opts: ["Because both reduce unauthorized access opportunities in different ways", "Because both increase bandwidth", "Because both replace encryption", "Because both are forms of physical topology", "Because shared computers cannot use authentication"],
+                a: "Because both reduce unauthorized access opportunities in different ways"
+            }, {
+                q: "Which of the following is the best example of access control?",
+                opts: ["Breaking a message into frames", "Choosing the shortest path through the network", "Encoding numbers as bits", "Detecting packet jitter", "Deciding which authenticated user may access which resource"],
+                a: "Deciding which authenticated user may access which resource"
+            }, {
+                q: "Which statement best distinguishes delivery from timeliness in data communication?",
+                opts: ["Delivery is about encryption, timeliness about compression", "Delivery belongs to OSI, timeliness belongs to TCP/IP only", "Delivery concerns reaching the correct destination, while timeliness concerns reaching it at an appropriate time", "Delivery and timeliness are identical", "Timeliness matters only in text communication"],
+                a: "Delivery concerns reaching the correct destination, while timeliness concerns reaching it at an appropriate time"
+            }, {
+                q: "Why is the application layer in TCP/IP often described as corresponding to three OSI layers?",
+                opts: ["Because session and presentation functions may be included within applications rather than separated", "Because TCP/IP has more physical layers than OSI", "Because TCP/IP removes transport altogether", "Because routers merge them dynamically", "Because OSI has no application layer"],
+                a: "Because session and presentation functions may be included within applications rather than separated"
+            }, {
+                q: "A student says, \"If one workstation fails, the rest of the office network should keep working, but if the central device fails, the whole network may stop.\" Which topology is the student describing?",
+                opts: ["Bus", "Ring", "Star", "Mesh", "Tree"],
+                a: "Star"
+            }, {
+                q: "Which statement is most accurate about ring topology?",
+                opts: ["It depends on one central switch", "It always provides the highest redundancy", "It uses no predictable path for data", "It is the default topology of TCP/IP", "It was common in early LANs but is less popular now because one failure can disrupt the network unless redundancy exists"],
+                a: "It was common in early LANs but is less popular now because one failure can disrupt the network unless redundancy exists"
+            }, {
+                q: "Which question is most appropriate for the network layer, not the data link or transport layer?",
+                opts: ["Did the signal voltage exceed the medium's limit", "Was the frame reconstructed correctly on the next hop", "Did the two applications synchronize their dialogue", "Which path should the packet take through interconnected networks", "Did the message arrive in sequence between processes"],
+                a: "Which path should the packet take through interconnected networks"
+            }, {
+                q: "Which combined statement is most faithful?",
+                opts: ["Authentication alone is sufficient for full network security", "VPNs provide security mainly by avoiding all use of the Internet", "Network security aims to protect access, stored/transmitted data, and service availability through multiple coordinated controls", "TCP/IP includes more layers than OSI", "Jitter is the same as inaccuracy"],
+                a: "Network security aims to protect access, stored/transmitted data, and service availability through multiple coordinated controls"
+            }, {
+                q: "Which statement best distinguishes data from information?",
+                opts: ["Data are processed facts, while information is raw", "Information is meaningful processed data, while data are raw facts", "Both terms mean exactly the same thing", "Information exists only in numbers", "Data cannot be stored digitally"],
+                a: "Information is meaningful processed data, while data are raw facts"
+            }, {
+                q: "Data communication in computer networks is best defined as:",
+                opts: ["storing files in a database", "exchanging data between two devices over a transmission medium", "converting analog to digital only", "assigning IP addresses", "compressing multimedia"],
+                a: "exchanging data between two devices over a transmission medium"
+            }, {
+                q: "Which of the following is not one of the four fundamental characteristics of data communication?",
+                opts: ["Delivery", "Accuracy", "Timeliness", "Jitter", "Multiplexing"],
+                a: "Multiplexing"
+            }, {
+                q: "If packets arrive to the correct user but some bits are corrupted during transmission, the failed characteristic is:",
+                opts: ["Delivery", "Accuracy", "Timeliness", "Jitter", "Protocol"],
+                a: "Accuracy"
+            }, {
+                q: "Which communication characteristic is most directly associated with variation in packet arrival time?",
+                opts: ["Accuracy", "Jitter", "Delivery", "Bandwidth", "Encoding"],
+                a: "Jitter"
+            }, {
+                q: "In the five components of a data communication system, the path by which the message travels is the:",
+                opts: ["protocol", "sender", "receiver", "transmission medium", "message"],
+                a: "transmission medium"
+            }, {
+                q: "Why is protocol essential in data communication?",
+                opts: ["It is optional in digital systems", "It physically carries bits", "It provides shared rules for understanding and exchange", "It replaces the sender", "It defines only encryption"],
+                a: "It provides shared rules for understanding and exchange"
+            }, {
+                q: "Which of the following is explicitly listed as a form of data representation?",
+                opts: ["Voltage", "Images", "Routing tables", "Handshakes", "Sessions"],
+                a: "Images"
+            }, {
+                q: "Audio data is described as:",
+                opts: ["purely discrete", "only ASCII-based", "continuous rather than discrete", "identical to video", "impossible to broadcast"],
+                a: "continuous rather than discrete"
+            }, {
+                q: "Physical topology defines:",
+                opts: ["how data logically flows only", "how devices are physically wired", "the application-layer services", "the type of firewall used", "user permissions"],
+                a: "how devices are physically wired"
+            }, {
+                q: "Which topology is the simplest and most cost-effective for small networks, but can fail entirely if the central bus fails?",
+                opts: ["Star", "Ring", "Mesh", "Tree", "Bus"],
+                a: "Bus"
+            }, {
+                q: "Which topology is especially common in offices and home networks because centralized management makes troubleshooting easier?",
+                opts: ["Bus", "Star", "Ring", "Mesh", "Hybrid"],
+                a: "Star"
+            }, {
+                q: "Ring topology is less popular today mainly because:",
+                opts: ["it needs no protocol", "it cannot carry data in one direction", "one device or connection failure can disrupt the network unless redundancy exists", "it always costs more than mesh", "it cannot support LANs"],
+                a: "one device or connection failure can disrupt the network unless redundancy exists"
+            }, {
+                q: "Which topology provides the highest level of redundancy by connecting each device directly to every other device?",
+                opts: ["Bus", "Ring", "Star", "Mesh", "Tree"],
+                a: "Mesh"
+            }, {
+                q: "Tree topology can be described as:",
+                opts: ["a circular structure only", "multiple star networks connected to a backbone bus", "a fully connected network", "a single shared line only", "two point-to-point links"],
+                a: "multiple star networks connected to a backbone bus"
+            }, {
+                q: "Hybrid topology is best understood as:",
+                opts: ["a topology with no structure", "only star and tree together", "a combination of two or more different topologies to meet network needs", "a WAN-only design", "a replacement for protocols"],
+                a: "a combination of two or more different topologies to meet network needs"
+            }, {
+                q: "The OSI model was introduced as an international standard to cover:",
+                opts: ["only application security", "only packet routing", "all aspects of network communications", "only physical media", "only LAN design"],
+                a: "all aspects of network communications"
+            }, {
+                q: "The OSI physical layer is mainly responsible for:",
+                opts: ["logical addressing", "moving frames hop-to-hop", "providing physical interface and bit transmission rules", "dialog control", "process-to-process delivery"],
+                a: "providing physical interface and bit transmission rules"
+            }, {
+                q: "The data link layer is mainly responsible for:",
+                opts: ["source-to-destination packet delivery", "moving frames from one hop to the next", "data compression", "password validation", "user services"],
+                a: "moving frames from one hop to the next"
+            }, {
+                q: "Which OSI layer defines the most optimum path for packets and handles logical addressing?",
+                opts: ["Data Link", "Session", "Network", "Presentation", "Application"],
+                a: "Network"
+            }, {
+                q: "The transport layer is responsible for delivery from:",
+                opts: ["bit to bit", "host to host only", "process to process", "router to router only", "medium to medium"],
+                a: "process to process"
+            }, {
+                q: "Which OSI layer handles dialog control, synchronization, and may provide check-pointing?",
+                opts: ["Physical", "Session", "Network", "Transport", "Data Link"],
+                a: "Session"
+            }, {
+                q: "Translation, compression, and encryption are responsibilities of the:",
+                opts: ["Application layer", "Session layer", "Presentation layer", "Transport layer", "Data Link layer"],
+                a: "Presentation layer"
+            }, {
+                q: "The highest level of the OSI model, which interacts with application programs such as file transfer and e-mail, is the:",
+                opts: ["Presentation layer", "Application layer", "Session layer", "Network layer", "Physical layer"],
+                a: "Application layer"
+            }, {
+                q: "The TCP/IP protocol suite differs from OSI in that:",
+                opts: ["it has more layers than OSI", "it does not include transport", "session and presentation are not separate layers in TCP/IP", "it excludes networking", "it cannot support applications"],
+                a: "session and presentation are not separate layers in TCP/IP"
+            }, {
+                q: "TCP/IP is hierarchical because:",
+                opts: ["each upper-level protocol is supported by one or more lower-level protocols", "all layers are independent", "only routers use it", "application programs replace lower layers", "it uses one protocol only"],
+                a: "each upper-level protocol is supported by one or more lower-level protocols"
+            }, {
+                q: "The main goal of network security is to maintain:",
+                opts: ["cost, speed, redundancy", "confidentiality, integrity, availability", "protocols, topologies, media", "encryption, routing, switching", "filtering, framing, fragmentation"],
+                a: "confidentiality, integrity, availability"
+            }, {
+                q: "Which of the following is listed as a key component of network security?",
+                opts: ["DNS only", "Firewalls", "Bus topology", "Unicode", "Session checkpoints"],
+                a: "Firewalls"
+            }, {
+                q: "VPNs are primarily used to:",
+                opts: ["remove the need for encryption", "encrypt transmissions over public networks for secure remote access", "replace routers in offices", "stop all internal communication", "increase collisions"],
+                a: "encrypt transmissions over public networks for secure remote access"
+            }, {
+                q: "Network segmentation improves security mainly because it:",
+                opts: ["removes the need for access control", "limits the spread of threats by isolating sensitive sections", "encrypts all files automatically", "replaces IDS/IPS", "prevents all malware"],
+                a: "limits the spread of threats by isolating sensitive sections"
+            }, {
+                q: "Which of the following is a fundamental network security practice?",
+                opts: ["disabling updates", "sharing public-computer sessions", "creating strong passwords", "removing firewalls", "avoiding encryption"],
+                a: "creating strong passwords"
+            }, {
+                q: "Network threats may aim at:",
+                opts: ["only physical damage", "only spying", "only financial gain", "spying, disruption, or financial gain", "only bandwidth increase"],
+                a: "spying, disruption, or financial gain"
+            }, {
+                q: "Which level of network security governs permissions, authorization processes, and user behavior?",
+                opts: ["Physical", "Administrative", "Technical", "Encryption", "Transport"],
+                a: "Administrative"
+            }, {
+                q: "End-point authentication is the process of:",
+                opts: ["compressing packets before transmission", "one entity proving its identity to another over a network", "checking only IP addresses", "preventing routing loops", "choosing a topology"],
+                a: "one entity proving its identity to another over a network"
+            }, {
+                q: "Protocol ap1.0 fails because:",
+                opts: ["it uses a nonce incorrectly", "Bob has no way to know the sender claiming \"I am Alice\" is really Alice", "Alice sends too many packets", "it uses encryption", "it depends on VPNs"],
+                a: "Bob has no way to know the sender claiming \"I am Alice\" is really Alice"
+            }, {
+                q: "Protocol ap2.0 is still insecure mainly because:",
+                opts: ["passwords are visible", "IP source addresses can be spoofed", "it lacks a receiver", "it uses too much encryption", "it requires two routers"],
+                a: "IP source addresses can be spoofed"
+            }, {
+                q: "Protocol ap3.0 is vulnerable because:",
+                opts: ["the password can be eavesdropped if sent unencrypted", "Bob cannot read passwords", "passwords are never used in real systems", "it uses public keys only", "it prevents replay"],
+                a: "the password can be eavesdropped if sent unencrypted"
+            }, {
+                q: "Protocol ap3.1 still fails because:",
+                opts: ["encryption makes Bob unable to authenticate Alice", "it does not use a router", "the encrypted password can be replayed by an attacker", "it sends no identification", "it removes the secret key"],
+                a: "the encrypted password can be replayed by an attacker"
+            }, {
+                q: "In ap4.0, the nonce is important because it helps Bob verify that Alice is:",
+                opts: ["using TCP/IP", "live and not replaying an old authentication exchange", "connected by bus topology", "using public-key cryptography", "inside a VPN"],
+                a: "live and not replaying an old authentication exchange"
+            }, {
+                q: "Network-layer security is called \"blanket coverage\" because it can protect:",
+                opts: ["only web traffic", "only TCP handshakes", "many types of upper-layer traffic between entities", "only ICMP messages", "only passwords"],
+                a: "many types of upper-layer traffic between entities"
+            }, {
+                q: "Institutions often build VPNs over the public Internet instead of separate private physical networks mainly because VPNs:",
+                opts: ["need no routers", "are always faster than private networks", "avoid all addressing", "are less costly while still providing confidentiality through encryption", "work only inside one office"],
+                a: "are less costly while still providing confidentiality through encryption"
             }];
 
             // ─── STATE ───────────────────────────────────────────────────────────────────
@@ -2407,7 +2995,10 @@
                 studentEmail: '',
                 questions: [],
                 answers: {},
-                currentPage: 0
+                currentPage: 0,
+                timeRemaining: 0,
+                initialTime: 0,
+                timerInterval: null
             };
 
             // ─── DOM REFS ────────────────────────────────────────────────────────────────
@@ -2520,6 +3111,8 @@
                 state.questions = pool;
                 state.answers = {};
                 state.currentPage = 0;
+                state.initialTime = pool.length * SECONDS_PER_Q;
+                state.timeRemaining = state.initialTime;
 
                 S('dispName').textContent = fields.name;
                 S('dispCollege').textContent = fields.college;
@@ -2529,8 +3122,7 @@
             }
             ;
 
-            // ─── TIMER ───────────────────────────────────────────────────────────────────
-
+            // ─── TIMER REMOVED ───────────────────────────────────────────────────────────
 
             // ─── RENDER PAGE ─────────────────────────────────────────────────────────────
             function renderPage() {
@@ -2646,8 +3238,6 @@
 
             // ─── SUBMIT ──────────────────────────────────────────────────────────────────
             function submitExam() {
-
-
                 let correct = 0
                   , incorrect = 0;
                 state.questions.forEach( (q, i) => {
@@ -2659,7 +3249,7 @@
                 );
 
                 const pct = Math.round((correct / state.questions.length) * 100);
-
+                const timeStr = '';
 
                 // Build answers payload (compact)
                 const answersPayload = state.questions.map( (q, i) => ({
@@ -2678,7 +3268,8 @@
                 S('resCollege').textContent = state.studentCollege;
                 S('resCorrect').textContent = correct;
                 S('resIncorrect').textContent = incorrect;
-                saveHistory(pct, correct);
+
+                saveHistory(pct, correct, timeStr);
                 show(screens.result);
 
                 // Send to backend (non-blocking)
@@ -2690,7 +3281,7 @@
                     correct,
                     incorrect,
                     total: state.questions.length,
-
+                    timeTaken: timeStr,
                     answers: answersPayload,
                     timestamp: new Date().toISOString()
                 });
@@ -2716,14 +3307,15 @@
             }
 
             // ─── LOCAL HISTORY ───────────────────────────────────────────────────────────
-            function saveHistory(pct, correct) {
+            function saveHistory(pct, correct, timeStr) {
                 let h = JSON.parse(localStorage.getItem('netSecHistory') || '[]');
                 h.unshift({
                     date: new Date().toLocaleDateString('ar-IQ'),
                     name: state.studentName,
                     college: state.studentCollege,
                     pct: pct + '%',
-                    score: `${correct}/${state.questions.length}`
+                    score: `${correct}/${state.questions.length}`,
+                    time: timeStr
                 });
                 if (h.length > 10)
                     h = h.slice(0, 10);
@@ -2735,7 +3327,7 @@
           <span style="color:var(--text-muted);font-size:12px;">${it.college} · ${it.date}</span></div>
         <div style="text-align:right">
           <span style="color:var(--neon-green);font-weight:700;">${it.pct}</span>
-          <span style="color:var(--text-muted);font-size:12px;display:block;">${it.score}</span>
+          <span style="color:var(--text-muted);font-size:12px;display:block;">${it.score} · ${it.time || ''}</span>
         </div>
       </div>`).join('');
             }
@@ -2751,7 +3343,7 @@
             ;
 
             // Init history on load
-            saveHistory(0, 0);
+            saveHistory(0, 0, '');
             S('historyContainer').innerHTML = '';
             const h0 = JSON.parse(localStorage.getItem('netSecHistory') || '[]');
             if (h0.length)
@@ -2767,7 +3359,7 @@
           <span style="color:var(--text-muted);font-size:12px;">${it.college || ''} · ${it.date}</span></div>
         <div style="text-align:right">
           <span style="color:var(--neon-green);font-weight:700;">${it.pct}</span>
-          <span style="color:var(--text-muted);font-size:12px;display:block;">${it.score}</span>
+          <span style="color:var(--text-muted);font-size:12px;display:block;">${it.score} · ${it.time || ''}</span>
         </div>
       </div>`).join('');
             }
